@@ -1,0 +1,84 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>敏感词检测系统</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f6f8;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align:left;
+         }
+         label {
+         display:block;
+         margin-bottom: 8px;
+         font-weight:bold;
+         color:#555;
+         }
+         input[type="file"] {
+         width: 100%;
+         padding:10px;
+         border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* 确保 padding 不会撑大宽度 */
+        }
+
+        /* 按钮样式 */
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 结果显示区域样式 */
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            text-align: left;
+            font-family: "Consolas", "Monaco", "Courier New", monospace;
+            white-space: pre-wrap; /* 保留换行符，让结果显示更清晰 */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>上传文件进行检测</h1>
+    <form action="/detect" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".docx">
+        <button type="submit">上传并检测</button>
+    </form>
+
+</body>
+</html>

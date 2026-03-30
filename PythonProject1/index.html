@@ -1,0 +1,15 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>敏感词检测系统</title>
+</head>
+<body>
+    <h1>上传文件进行检测</h1>
+    <form action="/detect" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".docx">
+        <button type="submit">上传并检测</button>
+    </form>
+</body>
+</html>
